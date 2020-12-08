@@ -1,0 +1,177 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+html,
+body {
+  background: #dadada;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
+
+.head {
+  background: #410d00;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  width: 100%; }
+  .head .logo {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 0; }
+    .head .logo .logo_cia {
+      width: 80px; }
+
+.head-admin {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #410d00;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #a06800;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%; }
+  .head-admin .lado {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .head-admin .lado .toogle {
+      margin-left: 15px; }
+    .head-admin .lado .logo {
+      margin: 0 auto;
+      margin-left: 60px;
+      font-size: 1.5rem;
+      font-size: 2rem;
+      padding: 0; }
+      .head-admin .lado .logo .logo_cia {
+        width: 80px; }
+    .head-admin .lado .usuario {
+      margin-right: 15px; }
+    .head-admin .lado .logOut {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #e60b0b;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-right: 5px;
+      padding: 5px; }
+  .head-admin .toggle {
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 50px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    -webkit-transition: 0.5;
+    -o-transition: 0.5;
+    transition: 0.5;
+    width: 50px; }
+    .head-admin .toggle:before {
+      background: #ffe15b;
+      border-radius: 8px;
+      content: "";
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 50%;
+      z-index: 20; }
+    .head-admin .toggle span {
+      width: 50%;
+      height: 4px;
+      position: absolute;
+      -webkit-transition: 0.5;
+      -o-transition: 0.5;
+      transition: 0.5;
+      background: #ffe15b;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 50; }
+      .head-admin .toggle span:nth-child(1) {
+        top: 30%;
+        left: 50%;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+      .head-admin .toggle span:nth-child(2) {
+        bottom: 30%;
+        left: 50%;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+  .head-admin .toggle.active:before {
+    width: 80%;
+    height: 80%;
+    background: #f00;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out; }
+  .head-admin .toggle.active span:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    background: #fff;
+    -webkit-transform: translate(-50%, -50%) rotate(135deg);
+    -ms-transform: translate(-50%, -50%) rotate(135deg);
+    transform: translate(-50%, -50%) rotate(135deg); }
+  .head-admin .toggle.active span:nth-child(2) {
+    bottom: 45%;
+    left: 50%;
+    width: 60%;
+    background: #fff;
+    -webkit-transform: translate(-50%, -50%) rotate(225deg);
+    -ms-transform: translate(-50%, -50%) rotate(225deg);
+    transform: translate(-50%, -50%) rotate(225deg); }
+
+.my_menu {
+  background: #2f2f2e;
+  position: relative;
+  height: 100vh;
+  height: calc(100vh - 70px);
+  left: -250px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  width: 250px; }
+  .my_menu .opcio {
+    border-bottom: 1px solid #a06800;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px; }
+    .my_menu .opcio:hover {
+      color: #fff;
+      background: #000; }
+
+.activemenu {
+  left: 0; }
+
+.error {
+  color: #ad0909;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center;
+  font-style: italic; }

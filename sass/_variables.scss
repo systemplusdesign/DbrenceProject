@@ -1,0 +1,117 @@
+@import "mixin.scss";
+$page_bkgr: #dadada;
+$page_color: #000000;
+$header_bkgr: #bfe2ff;
+$footer_bkgr: #bfe2ff;
+$danger: #b92424;
+$danger_hov: #8d0e0e;
+$continue: #11b603;
+$continue_hov: #128108;
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  background: $page_bkgr;
+  color: $page_color;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.head {
+  background: #410d00;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  width: 100%;
+  .logo {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 0;
+    .logo_cia {
+      width: 80px;
+    }
+  }
+}
+.head-admin {
+  align-items: center;
+  background: #410d00;
+  box-sizing: border-box;
+  border-bottom: 1px solid #a06800;
+  color: #ffffff;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  .lado {
+    align-items: center;
+    display: flex;
+    .toogle {
+      margin-left: 15px;
+    }
+    .logo {
+      margin: 0 auto;
+      margin-left: 60px;
+      font-size: 1.5rem;
+      font-size: 2rem;
+      padding: 0;
+      .logo_cia {
+        width: 80px;
+      }
+    }
+    .usuario {
+      margin-right: 15px;
+    }
+    .logOut {
+      box-sizing: border-box;
+      background: rgb(230, 11, 11);
+      border-radius: 50%;
+      cursor: pointer;
+      margin-right: 5px;
+      padding: 5px;
+    }
+  }
+  @include toggle;
+}
+.my_menu {
+  background: #2f2f2e;
+  position: relative;
+  height: 100vh;
+  height: calc(100vh - 70px);
+  left: -250px;
+  transition: 0.5s;
+  width: 250px;
+  .opcio {
+    border-bottom: 1px solid #a06800;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px;
+    &:hover {
+      color: #fff;
+      background: #000;
+
+      @media screen and (min-width: 1000px) {
+        // box-shadow: 1px 0 $my_orange inset, 1px 0 $my_orange inset;
+        // box-shadow: 100px 0 $my_orange inset, -100px 0 $my_orange inset;
+      }
+    }
+  }
+}
+.activemenu {
+  // top: 68px;
+  // right: 3px;
+  // transform: scale(1);
+  left: 0;
+}
+.error {
+  color: #ad0909;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center;
+  font-style: italic;
+}

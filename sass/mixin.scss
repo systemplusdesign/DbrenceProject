@@ -1,0 +1,96 @@
+@mixin btns_sinox {
+  // outline: 1px solid #000;
+  display: flex;
+  font-size: 0.9rem;
+  justify-content: space-around;
+  .back,
+  .send {
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 10px 8px 10px;
+    text-align: center;
+    width: 25px;
+  }
+  .back {
+    background: $danger;
+    &:hover {
+      background: $danger_hov;
+    }
+  }
+  .send {
+    background: $continue;
+    &:hover {
+      background: $continue_hov;
+    }
+  }
+}
+@mixin toggle {
+  .toggle {
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 50px;
+    // left: calc(100% - 50px);
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    transition: 0.5;
+    width: 50px;
+
+    &:before {
+      background: #ffe15b;
+      border-radius: 8px;
+      content: "";
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      z-index: 20;
+    }
+
+    span {
+      width: 50%;
+      height: 4px;
+      position: absolute;
+      transition: 0.5;
+      background: #ffe15b;
+      transform: translateX(-50%);
+      z-index: 50;
+
+      &:nth-child(1) {
+        top: 30%;
+        left: 50%;
+        transition: 0.5s;
+      }
+
+      &:nth-child(2) {
+        bottom: 30%;
+        left: 50%;
+        transition: 0.5s;
+      }
+    }
+  }
+  .toggle.active:before {
+    width: 80%;
+    height: 80%;
+    background: #f00;
+    transition: 0.5s ease-in-out;
+  }
+  .toggle.active span:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    background: #fff;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  .toggle.active span:nth-child(2) {
+    bottom: 45%;
+    left: 50%;
+    width: 60%;
+    background: #fff;
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+}

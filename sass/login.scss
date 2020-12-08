@@ -1,0 +1,49 @@
+@import "_variables";
+@import "mixin.scss";
+
+.wrp-login {
+  box-sizing: border-box;
+  font-size: 1.22rem;
+  .log-cont {
+    margin: 0 auto;
+    width: 400px;
+    .titu {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .inpBox {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .txt {
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+      .inp {
+        box-sizing: border-box;
+        font-size: 1.1rem;
+        padding: 8px;
+        padding-left: 45px;
+      }
+      .icon {
+        position: absolute;
+        left: 10px;
+        top: 53px;
+      }
+    }
+    .forgot {
+      cursor: pointer;
+      margin-top: 10px;
+      text-align: center;
+      color: rgb(100, 100, 100);
+      &:hover {
+        color: #790000;
+      }
+    }
+    .btns {
+      @include btns_sinox;
+    }
+  }
+}
